@@ -10,6 +10,7 @@ import pandas as pd
 DATA_DIR = Path(__file__).resolve().parents[2] / "data"
 CSV = DATA_DIR / "dropout.csv"
 UCI_ZIP = "https://archive.ics.uci.edu/static/public/697/predict+students+dropout+and+academic+success.zip"
+MIRROR = "https://raw.githubusercontent.com/SinaShakoori/Student-Dropout-Prediction/master/dataset.csv"
 
 
 def snake(name: str) -> str:
@@ -22,18 +23,23 @@ def download() -> Path:
     import requests
 
     DATA_DIR.mkdir(exist_ok=True)
-    resp = requests.get(UCI_ZIP, timeout=60)
-    resp.raise_for_status()
-    with zipfile.ZipFile(io.BytesIO(resp.content)) as z:
-        name = next(n for n in z.namelist() if n.endswith(".csv"))
-        CSV.write_bytes(z.read(name))
+    try:
+        resp = requests.get(UCI_ZIP, timeout=60)
+        resp.raise_for_status()
+        with zipfile.ZipFile(io.BytesIO(resp.content)) as z:
+            name = next(n for n in z.namelist() if n.endswith(".csv"))
+            CSV.write_bytes(z.read(name))
+    except Exception:
+        resp = requests.get(MIRROR, timeout=60)
+        resp.raise_for_status()
+        CSV.write_bytes(resp.content)
     return CSV
 
 
 def load() -> pd.DataFrame:
     if not CSV.exists():
         download()
-    df = pd.read_csv(CSV, sep=None, engine="python")
+    df = pd.read_csv(CSV, sep=None, engine="python", encoding="utf-8-sig")
     df.columns = [snake(c) for c in df.columns]
     df = df.rename(columns={"nacionality": "nationality", "daytime_evening_attendance": "evening_attendance"})
     df["evening_attendance"] = 1 - df["evening_attendance"]
@@ -64,9 +70,15 @@ FEATURE_SETS = {
 }
 
 
+def available(features: list[str], df: pd.DataFrame) -> list[str]:
+    """The Kaggle release lacks the two admission-grade columns UCI added later."""
+    return [f for f in features if f in df.columns]
+
+
 def add_derived(df: pd.DataFrame) -> pd.DataFrame:
     df = df.copy()
-    enrolled = df["curricular_units_1st_sem_enrolled"].replace(0, pd.NA)
-    df["sem1_pass_rate"] = (df["curricular_units_1st_sem_approved"] / enrolled).astype(float).fillna(0)
+    enrolled = df["curricular_units_1st_sem_enrolled"].astype(float)
+    approved = df["curricular_units_1st_sem_approved"].astype(float)
+    df["sem1_pass_rate"] = (approved / enrolled.where(enrolled > 0)).fillna(0.0)
     df["sem1_no_eval"] = (df["curricular_units_1st_sem_evaluations"] == 0).astype(int)
     return df

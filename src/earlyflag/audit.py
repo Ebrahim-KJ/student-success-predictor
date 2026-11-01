@@ -5,11 +5,11 @@ import pandas as pd
 from sklearn.metrics import average_precision_score, brier_score_loss, roc_auc_score
 
 
-def summary(y, p) -> dict:
+def summary(y, p, probabilities: bool = True) -> dict:
     y = np.asarray(y)
     p = np.asarray(p, float)
     return {"roc_auc": roc_auc_score(y, p), "pr_auc": average_precision_score(y, p),
-            "brier": brier_score_loss(y, p), "base_rate": float(y.mean())}
+            "brier": brier_score_loss(y, p) if probabilities else float("nan"), "base_rate": float(y.mean())}
 
 
 def calibration_table(y, p, bins: int = 10) -> pd.DataFrame:

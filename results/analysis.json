@@ -1,0 +1,745 @@
+{
+  "students": 4424,
+  "dropout_rate": 0.3212025316455696,
+  "outcomes": {
+    "Graduate": 2209,
+    "Dropout": 1421,
+    "Enrolled": 794
+  },
+  "capacity": {
+    "At enrollment": {
+      "model": "logistic",
+      "curve": [
+        {
+          "capacity": 0.05,
+          "flagged": 221,
+          "dropouts_reached": 175,
+          "recall": 0.12315270935960591,
+          "precision": 0.7918552036199095
+        },
+        {
+          "capacity": 0.1,
+          "flagged": 442,
+          "dropouts_reached": 324,
+          "recall": 0.22800844475721324,
+          "precision": 0.7330316742081447
+        },
+        {
+          "capacity": 0.15,
+          "flagged": 664,
+          "dropouts_reached": 465,
+          "recall": 0.32723434201266716,
+          "precision": 0.7003012048192772
+        },
+        {
+          "capacity": 0.2,
+          "flagged": 885,
+          "dropouts_reached": 578,
+          "recall": 0.4067558057705841,
+          "precision": 0.6531073446327683
+        },
+        {
+          "capacity": 0.25,
+          "flagged": 1106,
+          "dropouts_reached": 687,
+          "recall": 0.48346235045742436,
+          "precision": 0.6211573236889693
+        },
+        {
+          "capacity": 0.3,
+          "flagged": 1327,
+          "dropouts_reached": 788,
+          "recall": 0.5545390570021111,
+          "precision": 0.5938206480783723
+        },
+        {
+          "capacity": 0.35,
+          "flagged": 1548,
+          "dropouts_reached": 868,
+          "recall": 0.6108374384236454,
+          "precision": 0.5607235142118863
+        },
+        {
+          "capacity": 0.4,
+          "flagged": 1770,
+          "dropouts_reached": 941,
+          "recall": 0.6622097114707952,
+          "precision": 0.5316384180790961
+        },
+        {
+          "capacity": 0.45,
+          "flagged": 1991,
+          "dropouts_reached": 1019,
+          "recall": 0.717100633356791,
+          "precision": 0.5118031140130588
+        },
+        {
+          "capacity": 0.5,
+          "flagged": 2212,
+          "dropouts_reached": 1084,
+          "recall": 0.7628430682617875,
+          "precision": 0.49005424954792043
+        },
+        {
+          "capacity": 0.55,
+          "flagged": 2433,
+          "dropouts_reached": 1134,
+          "recall": 0.7980295566502463,
+          "precision": 0.46609124537607893
+        },
+        {
+          "capacity": 0.6,
+          "flagged": 2654,
+          "dropouts_reached": 1190,
+          "recall": 0.8374384236453202,
+          "precision": 0.4483798040693293
+        }
+      ]
+    },
+    "After semester 1": {
+      "model": "logistic",
+      "curve": [
+        {
+          "capacity": 0.05,
+          "flagged": 221,
+          "dropouts_reached": 216,
+          "recall": 0.15200562983814214,
+          "precision": 0.9773755656108597
+        },
+        {
+          "capacity": 0.1,
+          "flagged": 442,
+          "dropouts_reached": 435,
+          "recall": 0.30612244897959184,
+          "precision": 0.9841628959276018
+        },
+        {
+          "capacity": 0.15,
+          "flagged": 664,
+          "dropouts_reached": 635,
+          "recall": 0.4468684025334272,
+          "precision": 0.9563253012048193
+        },
+        {
+          "capacity": 0.2,
+          "flagged": 885,
+          "dropouts_reached": 815,
+          "recall": 0.573539760731879,
+          "precision": 0.9209039548022598
+        },
+        {
+          "capacity": 0.25,
+          "flagged": 1106,
+          "dropouts_reached": 949,
+          "recall": 0.6678395496129487,
+          "precision": 0.8580470162748643
+        },
+        {
+          "capacity": 0.3,
+          "flagged": 1327,
+          "dropouts_reached": 1055,
+          "recall": 0.7424349049964813,
+          "precision": 0.7950263752825923
+        },
+        {
+          "capacity": 0.35,
+          "flagged": 1548,
+          "dropouts_reached": 1139,
+          "recall": 0.8015482054890922,
+          "precision": 0.7357881136950905
+        },
+        {
+          "capacity": 0.4,
+          "flagged": 1770,
+          "dropouts_reached": 1201,
+          "recall": 0.8451794510907812,
+          "precision": 0.6785310734463277
+        },
+        {
+          "capacity": 0.45,
+          "flagged": 1991,
+          "dropouts_reached": 1247,
+          "recall": 0.8775510204081632,
+          "precision": 0.6263184329482672
+        },
+        {
+          "capacity": 0.5,
+          "flagged": 2212,
+          "dropouts_reached": 1287,
+          "recall": 0.9057002111189303,
+          "precision": 0.5818264014466547
+        },
+        {
+          "capacity": 0.55,
+          "flagged": 2433,
+          "dropouts_reached": 1305,
+          "recall": 0.9183673469387755,
+          "precision": 0.5363748458692972
+        },
+        {
+          "capacity": 0.6,
+          "flagged": 2654,
+          "dropouts_reached": 1323,
+          "recall": 0.9310344827586207,
+          "precision": 0.49849284099472496
+        }
+      ]
+    },
+    "Rule: lowest semester-1 pass rate": {
+      "model": "rule",
+      "curve": [
+        {
+          "capacity": 0.05,
+          "flagged": 221,
+          "dropouts_reached": 113,
+          "recall": 0.07952146375791697,
+          "precision": 0.5113122171945701
+        },
+        {
+          "capacity": 0.1,
+          "flagged": 442,
+          "dropouts_reached": 319,
+          "recall": 0.22448979591836735,
+          "precision": 0.7217194570135747
+        },
+        {
+          "capacity": 0.15,
+          "flagged": 664,
+          "dropouts_reached": 522,
+          "recall": 0.3673469387755102,
+          "precision": 0.786144578313253
+        },
+        {
+          "capacity": 0.2,
+          "flagged": 885,
+          "dropouts_reached": 697,
+          "recall": 0.4904996481351161,
+          "precision": 0.7875706214689265
+        },
+        {
+          "capacity": 0.25,
+          "flagged": 1106,
+          "dropouts_reached": 844,
+          "recall": 0.5939479239971851,
+          "precision": 0.7631103074141049
+        },
+        {
+          "capacity": 0.3,
+          "flagged": 1327,
+          "dropouts_reached": 951,
+          "recall": 0.669247009148487,
+          "precision": 0.7166541070082894
+        },
+        {
+          "capacity": 0.35,
+          "flagged": 1548,
+          "dropouts_reached": 1055,
+          "recall": 0.7424349049964813,
+          "precision": 0.6815245478036176
+        },
+        {
+          "capacity": 0.4,
+          "flagged": 1770,
+          "dropouts_reached": 1120,
+          "recall": 0.7881773399014779,
+          "precision": 0.632768361581921
+        },
+        {
+          "capacity": 0.45,
+          "flagged": 1991,
+          "dropouts_reached": 1177,
+          "recall": 0.8282899366643209,
+          "precision": 0.5911602209944752
+        },
+        {
+          "capacity": 0.5,
+          "flagged": 2212,
+          "dropouts_reached": 1227,
+          "recall": 0.8634764250527798,
+          "precision": 0.5547016274864376
+        },
+        {
+          "capacity": 0.55,
+          "flagged": 2433,
+          "dropouts_reached": 1251,
+          "recall": 0.88036593947924,
+          "precision": 0.5141800246609125
+        },
+        {
+          "capacity": 0.6,
+          "flagged": 2654,
+          "dropouts_reached": 1263,
+          "recall": 0.88881069669247,
+          "precision": 0.4758854559155991
+        }
+      ]
+    },
+    "Semester 1, no finance flags": {
+      "model": "logistic",
+      "curve": [
+        {
+          "capacity": 0.05,
+          "flagged": 221,
+          "dropouts_reached": 219,
+          "recall": 0.15411681914144967,
+          "precision": 0.9909502262443439
+        },
+        {
+          "capacity": 0.1,
+          "flagged": 442,
+          "dropouts_reached": 428,
+          "recall": 0.3011963406052076,
+          "precision": 0.9683257918552036
+        },
+        {
+          "capacity": 0.15,
+          "flagged": 664,
+          "dropouts_reached": 618,
+          "recall": 0.43490499648135117,
+          "precision": 0.9307228915662651
+        },
+        {
+          "capacity": 0.2,
+          "flagged": 885,
+          "dropouts_reached": 772,
+          "recall": 0.5432793807178043,
+          "precision": 0.8723163841807909
+        },
+        {
+          "capacity": 0.25,
+          "flagged": 1106,
+          "dropouts_reached": 902,
+          "recall": 0.6347642505277973,
+          "precision": 0.8155515370705244
+        },
+        {
+          "capacity": 0.3,
+          "flagged": 1327,
+          "dropouts_reached": 996,
+          "recall": 0.7009148486981,
+          "precision": 0.7505651846269782
+        },
+        {
+          "capacity": 0.35,
+          "flagged": 1548,
+          "dropouts_reached": 1082,
+          "recall": 0.7614356087262492,
+          "precision": 0.6989664082687338
+        },
+        {
+          "capacity": 0.4,
+          "flagged": 1770,
+          "dropouts_reached": 1148,
+          "recall": 0.8078817733990148,
+          "precision": 0.6485875706214689
+        },
+        {
+          "capacity": 0.45,
+          "flagged": 1991,
+          "dropouts_reached": 1211,
+          "recall": 0.8522167487684729,
+          "precision": 0.6082370668006027
+        },
+        {
+          "capacity": 0.5,
+          "flagged": 2212,
+          "dropouts_reached": 1255,
+          "recall": 0.8831808585503167,
+          "precision": 0.5673598553345389
+        },
+        {
+          "capacity": 0.55,
+          "flagged": 2433,
+          "dropouts_reached": 1286,
+          "recall": 0.9049964813511612,
+          "precision": 0.5285655569256063
+        },
+        {
+          "capacity": 0.6,
+          "flagged": 2654,
+          "dropouts_reached": 1308,
+          "recall": 0.9204785362420831,
+          "precision": 0.49284099472494347
+        }
+      ]
+    }
+  },
+  "performance": {
+    "At enrollment | logistic": {
+      "roc_auc": 0.7671373899382343,
+      "pr_auc": 0.61726796380751,
+      "brier": 0.17504145543650257,
+      "base_rate": 0.3212025316455696,
+      "features": 20
+    },
+    "At enrollment | lightgbm": {
+      "roc_auc": 0.7691180506099576,
+      "pr_auc": 0.6248091159297856,
+      "brier": 0.17441169237220472,
+      "base_rate": 0.3212025316455696,
+      "features": 20
+    },
+    "After semester 1 | logistic": {
+      "roc_auc": 0.9048483770510513,
+      "pr_auc": 0.8612655872527349,
+      "brier": 0.10340182333858285,
+      "base_rate": 0.3212025316455696,
+      "features": 30
+    },
+    "After semester 1 | lightgbm": {
+      "roc_auc": 0.9028745123044911,
+      "pr_auc": 0.8625711186373011,
+      "brier": 0.10340793405707223,
+      "base_rate": 0.3212025316455696,
+      "features": 30
+    },
+    "Semester 1, no finance flags | logistic": {
+      "roc_auc": 0.8830925115231941,
+      "pr_auc": 0.8251458260665402,
+      "brier": 0.11866314181120706,
+      "base_rate": 0.3212025316455696
+    },
+    "Rule: lowest semester-1 pass rate": {
+      "roc_auc": 0.8346041713388652,
+      "pr_auc": 0.6760938402888187,
+      "brier": NaN,
+      "base_rate": 0.3212025316455696
+    }
+  },
+  "fairness": {
+    "Gender": [
+      {
+        "group": "Female",
+        "n": 2868,
+        "dropout_rate": 0.2510460251046025,
+        "flag_rate": 0.18270571827057183,
+        "recall": 0.625,
+        "false_positive_rate": 0.03445065176908752,
+        "precision": 0.8587786259541985,
+        "mean_predicted": 0.2519689042074702
+      },
+      {
+        "group": "Male",
+        "n": 1556,
+        "dropout_rate": 0.4505141388174807,
+        "flag_rate": 0.3740359897172236,
+        "recall": 0.7118402282453637,
+        "false_positive_rate": 0.09707602339181287,
+        "precision": 0.8573883161512027,
+        "mean_predicted": 0.4507632844820541
+      }
+    ],
+    "Scholarship": [
+      {
+        "group": "No scholarship",
+        "n": 3325,
+        "dropout_rate": 0.38706766917293234,
+        "flag_rate": 0.3136842105263158,
+        "recall": 0.6961926961926962,
+        "false_positive_rate": 0.07212953876349362,
+        "precision": 0.8590604026845637,
+        "mean_predicted": 0.3879194918103012
+      },
+      {
+        "group": "Scholarship",
+        "n": 1099,
+        "dropout_rate": 0.12192902638762511,
+        "flag_rate": 0.05732484076433121,
+        "recall": 0.39552238805970147,
+        "false_positive_rate": 0.010362694300518135,
+        "precision": 0.8412698412698413,
+        "mean_predicted": 0.12211299149394828
+      }
+    ],
+    "Age at enrollment": [
+      {
+        "group": "20 or under",
+        "n": 2551,
+        "dropout_rate": 0.2124656997255978,
+        "flag_rate": 0.14033712269698156,
+        "recall": 0.5202952029520295,
+        "false_positive_rate": 0.037829766052762566,
+        "precision": 0.7877094972067039,
+        "mean_predicted": 0.22000809705237062
+      },
+      {
+        "group": "21 to 25",
+        "n": 828,
+        "dropout_rate": 0.35628019323671495,
+        "flag_rate": 0.27294685990338163,
+        "recall": 0.6338983050847458,
+        "false_positive_rate": 0.07317073170731707,
+        "precision": 0.827433628318584,
+        "mean_predicted": 0.34987675591926776
+      },
+      {
+        "group": "Over 25",
+        "n": 1045,
+        "dropout_rate": 0.5588516746411484,
+        "flag_rate": 0.4995215311004785,
+        "recall": 0.821917808219178,
+        "false_positive_rate": 0.0911062906724512,
+        "precision": 0.9195402298850575,
+        "mean_predicted": 0.5484171085544014
+      }
+    ],
+    "Attendance": [
+      {
+        "group": "Daytime",
+        "n": 3941,
+        "dropout_rate": 0.30804364374524235,
+        "flag_rate": 0.23674194366911952,
+        "recall": 0.6490939044481054,
+        "false_positive_rate": 0.053171983865053174,
+        "precision": 0.8445873526259379,
+        "mean_predicted": 0.3084980201983404
+      },
+      {
+        "group": "Evening",
+        "n": 483,
+        "dropout_rate": 0.42857142857142855,
+        "flag_rate": 0.3581780538302277,
+        "recall": 0.7777777777777778,
+        "false_positive_rate": 0.043478260869565216,
+        "precision": 0.930635838150289,
+        "mean_predicted": 0.4311465638083667
+      }
+    ],
+    "Displaced": [
+      {
+        "group": "Displaced",
+        "n": 2426,
+        "dropout_rate": 0.275762572135202,
+        "flag_rate": 0.19249793899422918,
+        "recall": 0.5695067264573991,
+        "false_positive_rate": 0.048947068867387596,
+        "precision": 0.815845824411135,
+        "mean_predicted": 0.27631212157330703
+      },
+      {
+        "group": "Not displaced",
+        "n": 1998,
+        "dropout_rate": 0.3763763763763764,
+        "flag_rate": 0.31981981981981983,
+        "recall": 0.7553191489361702,
+        "false_positive_rate": 0.05698234349919743,
+        "precision": 0.8888888888888888,
+        "mean_predicted": 0.3772278683604893
+      }
+    ]
+  },
+  "calibration": {
+    "At enrollment": [
+      {
+        "bin": 0,
+        "predicted": 0.05071177001536354,
+        "observed": 0.04966139954853273,
+        "n": 443
+      },
+      {
+        "bin": 1,
+        "predicted": 0.09521988435234856,
+        "observed": 0.11538461538461539,
+        "n": 442
+      },
+      {
+        "bin": 2,
+        "predicted": 0.13793991103139702,
+        "observed": 0.13800904977375567,
+        "n": 442
+      },
+      {
+        "bin": 3,
+        "predicted": 0.18569540493033854,
+        "observed": 0.21896162528216703,
+        "n": 443
+      },
+      {
+        "bin": 4,
+        "predicted": 0.24166652603051572,
+        "observed": 0.2398190045248869,
+        "n": 442
+      },
+      {
+        "bin": 5,
+        "predicted": 0.30761091353052844,
+        "observed": 0.3235294117647059,
+        "n": 442
+      },
+      {
+        "bin": 6,
+        "predicted": 0.3812017534346555,
+        "observed": 0.345372460496614,
+        "n": 443
+      },
+      {
+        "bin": 7,
+        "predicted": 0.46544889800748496,
+        "observed": 0.4751131221719457,
+        "n": 442
+      },
+      {
+        "bin": 8,
+        "predicted": 0.578626458796439,
+        "observed": 0.5746606334841629,
+        "n": 442
+      },
+      {
+        "bin": 9,
+        "predicted": 0.7755378838469128,
+        "observed": 0.7313769751693002,
+        "n": 443
+      }
+    ],
+    "After semester 1": [
+      {
+        "bin": 0,
+        "predicted": 0.016753606868797396,
+        "observed": 0.02708803611738149,
+        "n": 443
+      },
+      {
+        "bin": 1,
+        "predicted": 0.034140330305243,
+        "observed": 0.04524886877828054,
+        "n": 442
+      },
+      {
+        "bin": 2,
+        "predicted": 0.05150613183255344,
+        "observed": 0.08144796380090498,
+        "n": 442
+      },
+      {
+        "bin": 3,
+        "predicted": 0.07586278903161243,
+        "observed": 0.06772009029345373,
+        "n": 443
+      },
+      {
+        "bin": 4,
+        "predicted": 0.11783998118089781,
+        "observed": 0.08144796380090498,
+        "n": 442
+      },
+      {
+        "bin": 5,
+        "predicted": 0.1887967020378609,
+        "observed": 0.19457013574660634,
+        "n": 442
+      },
+      {
+        "bin": 6,
+        "predicted": 0.3238221313558888,
+        "observed": 0.3295711060948081,
+        "n": 443
+      },
+      {
+        "bin": 7,
+        "predicted": 0.5681521262073138,
+        "observed": 0.5429864253393665,
+        "n": 442
+      },
+      {
+        "bin": 8,
+        "predicted": 0.8578229402440773,
+        "observed": 0.8597285067873304,
+        "n": 442
+      },
+      {
+        "bin": 9,
+        "predicted": 0.9839324847120721,
+        "observed": 0.981941309255079,
+        "n": 443
+      }
+    ]
+  },
+  "already_disengaged": {
+    "share_of_students": 0.0788878842676311,
+    "dropout_rate": 0.7048710601719198,
+    "share_of_flagged_dropouts": 0.20969441517386722
+  },
+  "importance": [
+    {
+      "feature": "curricular_units_1st_sem_approved",
+      "drop_in_pr_auc": 0.2990068041196863,
+      "sd": 0.012154952923263598
+    },
+    {
+      "feature": "tuition_fees_up_to_date",
+      "drop_in_pr_auc": 0.07589698135427395,
+      "sd": 0.008628925941190172
+    },
+    {
+      "feature": "curricular_units_1st_sem_enrolled",
+      "drop_in_pr_auc": 0.049888548601501964,
+      "sd": 0.006863385282121266
+    },
+    {
+      "feature": "course",
+      "drop_in_pr_auc": 0.02503772467039777,
+      "sd": 0.0038425849414661607
+    },
+    {
+      "feature": "sem1_pass_rate",
+      "drop_in_pr_auc": 0.01875467386907854,
+      "sd": 0.0033581147027476185
+    },
+    {
+      "feature": "curricular_units_1st_sem_credited",
+      "drop_in_pr_auc": 0.016054284318086594,
+      "sd": 0.0032309391082726477
+    },
+    {
+      "feature": "unemployment_rate",
+      "drop_in_pr_auc": 0.013626051768037845,
+      "sd": 0.002383930368692247
+    },
+    {
+      "feature": "fathers_occupation",
+      "drop_in_pr_auc": 0.00896316870559934,
+      "sd": 0.0020522928230242224
+    },
+    {
+      "feature": "sem1_no_eval",
+      "drop_in_pr_auc": 0.008168897645100592,
+      "sd": 0.002229632823692299
+    },
+    {
+      "feature": "application_mode",
+      "drop_in_pr_auc": 0.0078035038489930155,
+      "sd": 0.002059075227808645
+    },
+    {
+      "feature": "age_at_enrollment",
+      "drop_in_pr_auc": 0.007608527117612268,
+      "sd": 0.0013944187993591888
+    },
+    {
+      "feature": "mothers_qualification",
+      "drop_in_pr_auc": 0.004885948650508415,
+      "sd": 0.0016148411516031826
+    }
+  ],
+  "scholarship": {
+    "naive_rd": -0.26513864278530724,
+    "ipw_rd": -0.1993561866992449,
+    "ci": [
+      -0.23561383501449837,
+      -0.16327284564134317
+    ],
+    "ps_treated_range": [
+      0.02,
+      0.66060753965718
+    ],
+    "ps_control_range": [
+      0.02,
+      0.7338994296342738
+    ],
+    "share_clipped": 0.01198010849909584,
+    "rr_from_ipw": 0.48495779271562606,
+    "e_value": 3.541884339476021,
+    "dropout_scholarship": 0.12192902638762511,
+    "dropout_no_scholarship": 0.38706766917293234
+  }
+}
